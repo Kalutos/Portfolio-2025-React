@@ -1,44 +1,59 @@
-@import url("./assets/css/font.css");
-
 /* ====== MOB-XS ====== */
 @media (max-width: 380px) {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  /* SETTINGS AREA */
-  h2 {
+  .rpfig-l,
+  .rpfig-r {
     display: flex;
-    gap: 0.5em;
+    /* width: 100%;
+    gap: 1em; */
   }
-
-  /* ===== BODY AREA ===== */
-  body {
+  .rpfig-l {
+    flex-direction: column;
+  }
+  .rpfig-r {
+    flex-direction: column;
+  }
+  .rpfig-img {
+    display: none;
+  }
+  .rpfig-img img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /* height: 100%;  */
+  }
+  .rpfigc {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    max-width: 100vw;
-  }
-
-  /* ==== MAIN AREA ==== */
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5em;
-    gap: 2.5em;
-  }
-
-  /* == SECTION AREA == */
-  section {
-    display: flex;
-    flex-direction: column;
+    border: 2px solid var(--color-bdr);
+    border-radius: 4px;
     width: calc(90vw - 10vw);
-    gap: 2em;
   }
-  /* === BLOCKQUOTE === */
-  blockquote {
+  .rpfigc-h,
+  .rpfigc-b,
+  .rpfigc-f {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+  }
+  .rpfigc-h {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-box-head-back);
+  }
+  .rpfigc-h h3 {
+    font-weight: bold;
+  }
+  .rpfigc-h h3:hover {
+    color: var(--color-pagination);
+  }
+  .rpfigc-b {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .rpfigc-b h3 {
+    font-family: sans-serif;
+    /* font-size: 1.2em;
+    font-weight: 300; */
   }
 }
 

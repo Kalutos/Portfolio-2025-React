@@ -1,44 +1,64 @@
-@import url("./assets/css/font.css");
-
 /* ====== MOB-XS ====== */
 @media (max-width: 380px) {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  /* SETTINGS AREA */
-  h2 {
-    display: flex;
-    gap: 0.5em;
-  }
-
-  /* ===== BODY AREA ===== */
-  body {
+  /* == FORMULAIRE AREA == */
+  .form-ctn {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    max-width: 100vw;
+    border: 2px solid var(--color-bdr);
+    border-radius: 4px;
+    margin-bottom: 10em;
+    gap: 1em;
   }
-
-  /* ==== MAIN AREA ==== */
-  main {
+  .form-ask {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+  }
+  .form-ipt {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-lbl {
+    width: 40%;
+  }
+  .form-aswr {
+    width: 60%;
+    background-color: var(--color-box-head-back);
+    border: 1px solid var(--color-bdr);
+    border-radius: 4px;
+  }
+  .form-ifs {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  .form-ifs-t {
+  }
+  .form-ifs-icn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5em;
-    gap: 2.5em;
   }
-
-  /* == SECTION AREA == */
-  section {
+  .check-answer {
     display: flex;
     flex-direction: column;
-    width: calc(90vw - 10vw);
-    gap: 2em;
+    align-items: center;
+    gap: 1em;
   }
-  /* === BLOCKQUOTE === */
-  blockquote {
+  .privacy-data {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .form-btn {
+    background-color: var(--color-bkgd);
+    color: var(--color-txt-hvr);
+    border: 1px solid var(--color-bdr);
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 0.5em;
   }
 }
 
