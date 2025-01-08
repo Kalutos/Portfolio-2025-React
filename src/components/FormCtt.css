@@ -1,0 +1,178 @@
+/* @import "../assets/css/font.css"; */
+
+.form-ctn {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bkgd-d);
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.form-ask {
+  display: flex;
+  flex-direction: column;
+}
+.form-cln {
+  display: flex;
+  flex-direction: column;
+}
+.form-ipt {
+  display: flex;
+  flex-direction: column;
+}
+.form-lbl {
+}
+
+.form-aswr,
+.form-aswr-t {
+  background-color: var(--color-box-head-back);
+  border: 1px solid var(--color-hvr);
+  border-radius: 4px;
+}
+
+.form-ifs {
+  display: flex;
+  justify-content: space-between;
+}
+.form-ifs-t {
+}
+/* .form-ifs-icn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.check-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.privacy-data {
+  display: flex;
+  align-items: center;
+} */
+/* .form-btn {
+  background-color: var(--color-bkgd);
+  color: var(--color-txt-hvr);
+  border: 1px solid var(--color-hvr);
+  border-radius: 6px;
+} */
+
+/* ====== MOB-XS ====== */
+@media (max-width: 380px) {
+  .form-ctn {
+    width: calc(100vw - 20vw);
+    margin-bottom: 10em;
+    gap: 0.5em;
+  }
+  .form-cln {
+    gap: 0.5em;
+  }
+  .form-ask {
+    gap: 0.5em;
+  }
+  .form-ipt {
+    width: 100%;
+    margin: 0.5em 0em;
+    gap: 0.5em;
+  }
+  .form-lbl {
+  }
+  .form-aswr {
+    height: 30px;
+  }
+  .form-aswr-t {
+    height: 150px;
+  }
+  .form-ifs {
+    padding: 1em;
+  }
+}
+
+/* ====== MOB-S ====== */
+@media (min-width: 381px) and (max-width: 575px) {
+  .form-ctn {
+    width: calc(100vw - 20vw);
+    margin-bottom: 10em;
+    gap: 0.5em;
+  }
+  .form-cln {
+    gap: 0.5em;
+  }
+  .form-ask {
+    gap: 0.5em;
+  }
+  .form-ipt {
+    width: 100%;
+    margin: 0.5em 0em;
+    gap: 0.5em;
+  }
+  .form-lbl {
+  }
+  .form-aswr {
+    height: 30px;
+  }
+  .form-aswr-t {
+    height: 150px;
+  }
+  .form-ifs {
+    padding: 1em;
+  }
+}
+
+/* ====== MOB-M-PORT ====== */
+@media (min-width: 576px) and (orientation: portrait) {
+  .form-ctn {
+    width: calc(100vw - 20vw);
+    margin-bottom: 10em;
+    gap: 0.5em;
+  }
+  .form-cln {
+    gap: 0.5em;
+  }
+  .form-ask {
+    gap: 0.5em;
+  }
+  .form-ipt {
+    width: 100%;
+    margin: 0.5em 0em;
+    gap: 0.5em;
+  }
+  .form-lbl {
+  }
+  .form-aswr {
+    height: 30px;
+  }
+  .form-aswr-t {
+    height: 150px;
+  }
+  .form-ifs {
+    padding: 1em;
+  }
+}
+
+/* ====== MOB-M-LAND ====== */
+@media (min-width: 576px) and (orientation: landscape) {
+}
+
+/* ====== TABLET-S-PORT ====== */
+@media (min-width: 768px) and (orientation: portrait) {
+}
+
+/* ====== TABLET-S-LAND ====== */
+@media (min-width: 768px) and (orientation: landscape) {
+}
+
+/* ====== TABLET-M-PORT ====== */
+@media (min-width: 992px) and (orientation: portrait) {
+}
+
+/* ====== TABLET-M-LAND ====== */
+@media (min-width: 992px) and (orientation: landscape) {
+}
+
+/* ====== DESKTOP-M ====== */
+@media (min-width: 1200px) {
+}
+
+/* ====== DESKTOP-L ====== */
+@media (min-width: 1400px) {
+}

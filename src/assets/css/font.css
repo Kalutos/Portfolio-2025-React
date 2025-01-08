@@ -22,9 +22,9 @@
   --fs-mbl-bnr-h2: 2.5rem;
   --fs-mbl-bnr-h3: 2rem;
 
-  --fs-mbl-h1: 2.5rem; /* 40px */
-  --fs-mbl-h2: 2rem; /* 32px */
-  --fs-mbl-h3: 1.75rem; /* 28px */
+  --fs-mbl-h1: 1.75rem; /* 40px */
+  --fs-mbl-h2: 1.5rem; /* 32px */
+  --fs-mbl-h3: 1.25rem; /* 28px */
   --fs-mbl-h4: 1.5rem; /* 24px */
 
   /* === FONT TABLET === */
@@ -64,24 +64,20 @@
   --lh-dkt-heading: 1.3;
 
   /* === COLORS AREA === */
+  /* --color-box-head-back: #233554;
   --color-bkgd-ipt: #45507463;
-
-  --color-box-head-back: #233554;
-
-  --color-bkgd: #0a192f; /* BACKGROUND */
-  --color-bkgd-hdr: #112240; /* BACKGROUND HEADER */
-  --color-bnr-h1: #64ffda;
-  --color-bnr-h2: #e5e5e5;
   --color-bnr-h3: #8892b0;
-
   --color-txt: #a8b2d1;
-  --color-txt-hvr: #64ffda;
-
-  --color-icn: #a8b2d1;
-  --color-icn-hvr: #64ffda;
-
-  --color-bdr: #a8b2d1; /* HOVER BORDER LIST */
-  --color-bdr-hvr: #64ffda; /* HOVER BORDER LIST */
+  --color-hvr: #64ffda; */
+  --color-bkgd-d: #0a192f; /* BACKGROUND DARK */
+  --color-bkgd-w: #e6e6e6; /* BACKGROUND WHITE */
+  --color-bkgd-hdr: #112240; /* BACKGROUND HEADER & FOOTER*/
+  --color-txt-o: #bc660f; /* TITLE SECTION */
+  --color-txt-w: #e6e6e6; /* TXT WHITE */
+  --color-txt-d: #0a192f; /* TXT DARK */
+  --color-txt-blue: #2a8dff; /* TXT BLUE */
+  --color-txt-li: #e6e6e6; /* TXT LI RCTP */
+  --color-txt-ctt: #ccd6f6; /* TXT CITATION */
 }
 
 /* === GLOBAL TYPOGRAPHY SETTINGS === */
@@ -90,13 +86,17 @@ html {
 }
 
 body {
+  background-color: var(--color-bkgd-d);
   font-family: var(--font-secondary);
-  color: var(--color-txt);
-  background-color: var(--color-bkgd);
+  color: var(--color-txt-d);
   margin: 0;
   padding: 0;
 }
 
+#rctp-anchor,
+#book-anchor {
+  background-color: #e6e6e6;
+}
 /* === HEADINGS === */
 h1,
 h2,
@@ -107,27 +107,40 @@ h6 {
   font-family: var(--font-primary);
   font-weight: var(--fw-bold);
   line-height: var(--lh-heading);
+  color: var(--color-txt-d);
   margin: 0;
-  color: var(--color-txt);
+}
+h2 {
+  color: var(--color-txt-o);
+}
+h3 {
+  color: var(--color-txt-w);
 }
 h2 i {
-  color: var(--color-icn-hvr);
+  color: var(--color-txt-o);
 }
 /* === PARAGRAPHS === */
 p {
   line-height: var(--lh-mbl-normal);
   font-family: var(--font-primary);
-  color: var(--color-txt);
+  color: var(--color-txt-d);
+  margin: 0 auto;
 }
-
+img {
+  object-fit: cover;
+  object-position: center;
+}
 /* === LINKS === */
 a {
-  color: var(--color-icn);
+  color: var(--color-txt-d);
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s;
 }
 a:hover {
+  color: var(--color-hvr);
+}
+.footer a {
   color: var(--color-hvr);
 }
 i {
@@ -137,69 +150,50 @@ i {
   color: var(--color-icn);
 }
 i:hover {
-  color: var(--color-icn-hvr);
+  color: var(--color-hvr);
 }
 /* === LISTS AREA === */
 ul,
 ol {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  /* list-style-type: none; */
-
-  margin: 1em 0;
-  padding-left: 1.5em;
-  font-size: var(--fs-medium);
-}
-ul li::before {
-  content: "●";
-  color: var(--color-pc-lst);
-  font-size: 1em;
-  margin-right: 0.5em;
+  list-style-type: none;
 }
 ul li {
   display: flex;
-  color: var(--color-txt);
-}
-li {
-  margin: 0.5em 0;
-  line-height: var(--lh-normal);
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-/* === BLOCKQUOTE === */
-blockquote {
-  font-style: italic;
-  color: var(--color-txt);
-  background: var(--color-bkgd-hdr);
-  border-left: 4px solid var(--color-bdr);
+  color: var(--color-txt-d);
 }
 /* BUTTON AREA */
 .icn-lnk {
-  color: var(--color-txt);
+  color: var(--color-txt-w);
   text-decoration: none;
 }
 .icn-lnk:hover {
   color: var(--color-hvr);
 }
-.btn {
-  background-color: var(--color-bkgd);
-  color: var(--color-txt-hvr);
-  border: 1px solid var(--color-bdr);
-  font-weight: var(--fw-regular);
+.btn-w,
+.btn-d {
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  border-radius: 6px;
+  margin: 0.5em auto;
+  padding: 0.5em;
 }
-.btn:hover {
+.btn-w {
+  background-color: var(--color-bkgd-w);
+  color: var(--color-txt-blue);
+  border: 1px solid var(--color-txt-blue);
+}
+.btn-d {
+  background-color: var(--color-bkgd-d);
+  color: var(--color-txt-blue);
+  border: 1px solid var(--color-txt-blue);
+}
+/* .btn:hover {
   background-color: var(--color-hvr);
   color: var(--color-txt);
   border: 1px solid var(--color-bkgd);
-}
+} */
 
 /* === RESPONSIVE TYPOGRAPHY === */
 
@@ -211,51 +205,43 @@ blockquote {
   }
   /* === HEADINGS === */
   h1 {
-    font-size: var(--fs-h1);
+    font-size: var(--fs-mbl-xl);
     font-weight: var(--fw-bold);
   }
   h2 {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-mbl-xl);
     font-weight: var(--fw-bold);
   }
-  h3 {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-bold);
-  }
-  h4 {
-    font-size: var(--fs-h4);
-    font-weight: var(--fw-bold);
-  }
+  h3,
+  h4,
   h5,
   h6 {
-    font-size: 1.25rem;
+    font-size: var(--fs-mbl-mdm);
+    font-weight: var(--fw-bold);
   }
+
   /* === PARAGRAPHS === */
   p {
-    margin: 1em 1em;
-    font-size: var(--fs-mbl-medium);
+    /* margin: 0.5em 0.5em; */
+    font-size: var(--fs-mbl-sml);
   }
 
   /* === LINKS === */
+  i {
+    font-size: 1.5rem;
+  }
   /* === LISTS AREA === */
   ul,
   ol {
-    margin: 1em 0;
-    padding-left: 1.5em;
-    font-size: var(--fs-medium);
+    margin: 0;
+    padding-left: 0;
+    gap: 0.5em;
+    font-size: var(--fs-mbl-sml);
   }
 
   li {
     margin: 0.5em 0;
     line-height: var(--lh-normal);
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style-type: decimal;
   }
   /* === BLOCKQUOTE === */
   blockquote {
@@ -271,21 +257,167 @@ blockquote {
   .btn {
     font-size: var(--fs-mbl-sml);
     border-radius: 8px;
-    margin: 0.5em 1em;
-    padding: 0.5em;
+    margin: 0.2em 0.2em;
+    padding: 0.3em;
+  }
+  .btn-crs {
+    color: var(--color-hvr);
+    font-size: var(--fs-mbl-sml);
+    width: calc(33.33% - 0vw);
+    padding: 0.3em;
+    border: 1px solid var(--color-hvr);
+    background-color: var(--color-bkgd-hdr);
   }
 }
 /* ====== MOB-S ====== */
 @media (min-width: 381px) and (max-width: 575px) {
-  :root {
-    --fs-h1: 2rem;
-    --fs-h2: 1.75rem;
-    --fs-h3: 1.5rem;
-    --fs-h4: 1.25rem;
+  body {
+    font-size: var(--fs-mbl-base);
+    line-height: var(--lh-mbl-normal);
+  }
+  /* === HEADINGS === */
+  h1 {
+    font-size: var(--fs-mbl-h1);
+    font-weight: var(--fw-bold);
+  }
+  h2 {
+    font-size: var(--fs-mbl-h2);
+    font-weight: var(--fw-bold);
+  }
+  h3 {
+    font-size: var(--fs-mbl-h3);
+    font-weight: var(--fw-bold);
+  }
+  h4 {
+    font-size: var(--fs-mbl-h4);
+    font-weight: var(--fw-bold);
+  }
+  h5,
+  h6 {
+    font-size: 1.25rem;
+  }
+  /* === PARAGRAPHS === */
+  p {
+    /* margin: 0.5em 0.5em; */
+    font-size: var(--fs-mbl-sml);
+  }
+
+  /* === LINKS === */
+  i {
+    font-size: 1.5rem;
+  }
+  /* === LISTS AREA === */
+  ul,
+  ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    font-size: var(--fs-mbl-sml);
+  }
+
+  li {
+    margin: 0.5em 0;
+    line-height: var(--lh-normal);
+  }
+  /* === BLOCKQUOTE === */
+  blockquote {
+    margin: 1em 0;
+    padding: 1em;
+    font-size: var(--fs-large);
+  }
+  /* BUTTON AREA */
+  .icn-lnk {
+    font-size: 1em;
+    padding: 0.2em;
+  }
+  .btn {
+    font-size: var(--fs-mbl-sml);
+    border-radius: 8px;
+    margin: 0.2em 0.2em;
+    padding: 0.3em;
+  }
+  .btn-crs {
+    color: var(--color-hvr);
+    font-size: var(--fs-mbl-sml);
+    width: calc(33.33% - 0vw);
+    padding: 0.3em;
+    border: 1px solid var(--color-hvr);
+    background-color: var(--color-bkgd-hdr);
   }
 }
 /* ====== MOB-M-PORT ====== */
 @media (min-width: 576px) and (orientation: portrait) {
+  body {
+    font-size: var(--fs-mbl-base);
+    line-height: var(--lh-mbl-normal);
+  }
+  /* === HEADINGS === */
+  h1 {
+    font-size: var(--fs-mbl-h1);
+    font-weight: var(--fw-bold);
+  }
+  h2 {
+    font-size: var(--fs-mbl-h2);
+    font-weight: var(--fw-bold);
+  }
+  h3 {
+    font-size: var(--fs-mbl-h3);
+    font-weight: var(--fw-bold);
+  }
+  h4 {
+    font-size: var(--fs-mbl-h4);
+    font-weight: var(--fw-bold);
+  }
+  h5,
+  h6 {
+    font-size: 1.25rem;
+  }
+  /* === PARAGRAPHS === */
+  p {
+    /* margin: 0.5em 0.5em; */
+    font-size: var(--fs-mbl-mdm);
+  }
+
+  /* === LINKS === */
+  i {
+    font-size: 1.5rem;
+  }
+  /* === LISTS AREA === */
+  ul,
+  ol {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    font-size: var(--fs-mbl-sml);
+  }
+
+  li {
+    margin: 0.5em 0;
+    line-height: var(--lh-normal);
+  }
+  /* === BLOCKQUOTE === */
+  blockquote {
+    margin: 1em 0;
+    padding: 1em;
+    font-size: var(--fs-large);
+  }
+  /* BUTTON AREA */
+  .icn-lnk {
+    font-size: 1em;
+    padding: 0.2em;
+  }
+  .btn {
+    font-size: var(--fs-mbl-mdm);
+    border-radius: 8px;
+    margin: 0.2em 0.2em;
+    padding: 0.3em;
+  }
+  .btn-crs {
+    color: var(--color-hvr);
+    font-size: var(--fs-mbl-sml);
+    width: calc(33.33% - 0vw);
+    padding: 0.3em;
+    border: 1px solid var(--color-hvr);
+    background-color: var(--color-bkgd-hdr);
+  }
 }
 /* ====== MOB-M-LAND ====== */
 @media (min-width: 576px) and (orientation: landscape) {

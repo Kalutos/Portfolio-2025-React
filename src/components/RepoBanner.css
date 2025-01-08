@@ -1,0 +1,94 @@
+/* ====== MOB-XS ====== */
+@media (max-width: 380px) {
+  .rpfig-l,
+  .rpfig-r {
+    display: flex;
+    /* width: 100%;
+    gap: 1em; */
+  }
+  .rpfig-l {
+    flex-direction: column;
+  }
+  .rpfig-r {
+    flex-direction: column;
+  }
+  .rpfig-img {
+    display: none;
+  }
+  .rpfig-img img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    /* height: 100%;  */
+  }
+  .rpfigc {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color-bdr);
+    border-radius: 4px;
+    width: calc(90vw - 10vw);
+  }
+  .rpfigc-h,
+  .rpfigc-b,
+  .rpfigc-f {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+  }
+  .rpfigc-h {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-box-head-back);
+  }
+  .rpfigc-h h3 {
+    font-weight: bold;
+  }
+  .rpfigc-h h3:hover {
+    color: var(--color-pagination);
+  }
+  .rpfigc-b {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .rpfigc-b h3 {
+    font-family: sans-serif;
+    /* font-size: 1.2em;
+    font-weight: 300; */
+  }
+}
+
+/* ====== MOB-S ====== */
+@media (min-width: 381px) and (max-width: 575px) {
+}
+
+/* ====== MOB-M-PORT ====== */
+@media (min-width: 576px) and (orientation: portrait) {
+}
+
+/* ====== MOB-M-LAND ====== */
+@media (min-width: 576px) and (orientation: landscape) {
+}
+
+/* ====== TABLET-S-PORT ====== */
+@media (min-width: 768px) and (orientation: portrait) {
+}
+
+/* ====== TABLET-S-LAND ====== */
+@media (min-width: 768px) and (orientation: landscape) {
+}
+
+/* ====== TABLET-M-PORT ====== */
+@media (min-width: 992px) and (orientation: portrait) {
+}
+
+/* ====== TABLET-M-LAND ====== */
+@media (min-width: 992px) and (orientation: landscape) {
+}
+
+/* ====== DESKTOP-M ====== */
+@media (min-width: 1200px) {
+}
+
+/* ====== DESKTOP-L ====== */
+@media (min-width: 1400px) {
+}

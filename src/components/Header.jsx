@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Header.css";
-
+import logo from "../assets/img/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -29,7 +29,7 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <a href="#home-anchor">
-          <img src="img/logo.png" alt="logo-site" />
+          <img src={logo} alt="logo-site" />
         </a>
       </div>
       <div
@@ -44,7 +44,7 @@ const Header = () => {
       </div>
       <nav className={`menu ${isMenuOpen ? "active" : ""}`} ref={menuRef}>
         <a className="btn-menu" href="#about-anchor">
-          <i className="fa-regular fa-comment"></i>À propos
+          <i className="fa-regular fa-comment fa-flip-horizontal"></i>À propos
         </a>
         <a className="btn-menu" href="#course-anchor">
           <i className="fa-solid fa-medal"></i>Mon parcours
