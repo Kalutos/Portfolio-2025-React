@@ -18,10 +18,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-[#112240] flex justify-between items-center mx-auto z-1">
+    <header className="bg-[#112240] w-full fixed flex justify-between items-center mx-auto z-100">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo/Nom */}
           <Link
             href="/"
             className="text-2xl font-bold text-[#a8b2d1] hover:text-[#64FFDA] transition-colors"

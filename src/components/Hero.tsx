@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState("");
@@ -9,10 +8,9 @@ const Hero: React.FC = () => {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
 
   const titles = [
-    "Développeur Front-End",
-    "Créateur d'Expériences Web",
-    "Passionné de React",
-    "Artisan du Code",
+    "Développeur full-stack junior",
+    "React, Typescript, Node.js, Express",
+    "Résilient & déterminé",
   ];
 
   // Animation de frappe pour les titres
@@ -43,62 +41,63 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <div className="relative min-h-screen bg-[#0a192f] flex items-center justify-center overflow-hidden">
-        {/* Grille d'arrière-plan */}
-
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Salutation */}
-            <div className="mb-6">
-              <span className="text-[#64ffda] font-mono text-lg md:text-xl animate-fade-in">
-                Salut, je suis
-              </span>
-            </div>
-
-            {/* Nom principal */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-slide-up">
-              <span className="bg-gradient-to-r from-[#ccd6f6] to-[#64ffda] bg-clip-text text-transparent">
+      <section className="relative min-h-screen bg-[#0a192f] overflow-hidden">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-20 xl:py-24">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="mb-3 sm:mb-4 font-bold text-4xl mt-16 sm:mt-20 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight animate-slide-up">
+              <span className="block sm:inline bg-gradient-to-r from-[#ccd6f6] to-[#64ffda] bg-clip-text text-transparent">
                 Arthur Selva
               </span>
             </h1>
 
-            {/* Titre animé */}
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#8892b0] mb-8 h-16 flex items-center justify-center">
-              <span className="border-r-2 border-[#64ffda] pr-1 animate-blink">
-                {displayText}
-              </span>
-            </h2>
+            <div className="flex items-center justify-center mb-6 sm:mb-8 min-h-[3rem] sm:min-h-[4rem] lg:min-h-[5rem]">
+              <h2 className="text-center font-bold text-[#8892b0] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                <span className="inline-block pr-1 border-r-2 border-[#64ffda] animate-blink">
+                  {displayText}
+                </span>
+              </h2>
+            </div>
 
-            {/* Description */}
-            <p className="text-[#8892b0] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-delay">
-              Je crée des expériences web modernes et interactives. Spécialisé
-              en React, Next.js et les technologies front-end les plus récentes,
-              je transforme vos idées en applications web exceptionnelles.
-            </p>
+            <div className="mb-8 sm:mb-12 lg:mb-16">
+              <p className="mx-auto max-w-2xl text-[#8892b0] text-base sm:text-lg md:text-xl leading-relaxed">
+                En région parisienne, je développe des applications web modernes
+                avec React, Typescript et Node.js. J’aime comprendre les
+                besoins, simplifier les parcours et créer des expériences
+                vraiment agréables à utiliser.
+              </p>
+            </div>
 
-            {/* Boutons d'action */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 lg:mb-16">
               <button
                 onClick={() => scrollToSection("projects")}
-                className="group bg-transparent border-2 border-[#64ffda] text-[#64ffda] px-8 py-4 rounded-lg font-mono text-sm hover:bg-[#64ffda]/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#64ffda]/25"
+                className="group w-full sm:w-auto min-w-[200px] sm:min-w-[220px] lg:min-w-[240px] 
+                     px-6 sm:px-8 py-3 sm:py-4 
+                     bg-transparent border-2 border-[#64ffda] rounded-lg 
+                     text-[#64ffda] font-mono text-sm sm:text-base lg:text-lg
+                     transition-all duration-300 transform 
+                     hover:bg-[#64ffda]/10 hover:scale-105 hover:shadow-lg hover:shadow-[#64ffda]/25"
               >
-                <span className="group-hover:translate-x-1 inline-block transition-transform">
+                <span className="inline-block transition-transform group-hover:translate-x-1">
                   Voir mes projets →
                 </span>
               </button>
 
-              <Link
-                href="#contact"
-                className="group bg-[#64ffda] text-[#0a192f] px-8 py-4 rounded-lg font-mono text-sm font-semibold hover:bg-[#64ffda]/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#64ffda]/25"
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="group w-full sm:w-auto min-w-[200px] sm:min-w-[220px] lg:min-w-[240px] 
+                     px-6 sm:px-8 py-3 sm:py-4 
+                     bg-[#64ffda] rounded-lg 
+                     text-[#0a192f] font-mono font-semibold text-sm sm:text-base lg:text-lg text-center
+                     transition-all duration-300 transform 
+                     hover:bg-[#64ffda]/90 hover:scale-105 hover:shadow-lg hover:shadow-[#64ffda]/25"
               >
-                <span className="group-hover:translate-x-1 inline-block transition-transform">
+                <span className="inline-block transition-transform group-hover:translate-x-1">
                   Me contacter
                 </span>
-              </Link>
+              </button>
             </div>
 
-            {/* Réseaux sociaux */}
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center gap-6 sm:gap-8">
               {[
                 {
                   href: "https://github.com/Kalutos",
@@ -116,11 +115,12 @@ const Hero: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-300 transform hover:scale-110 hover:-translate-y-1"
+                  className="p-2 text-[#8892b0] transition-all duration-300 transform 
+                       hover:text-[#64ffda] hover:scale-110 hover:-translate-y-1"
                   aria-label={social.label}
                 >
                   <svg
-                    className="w-6 h-6"
+                    className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
