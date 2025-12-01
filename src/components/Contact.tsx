@@ -147,9 +147,7 @@ const Contact: React.FC<ContactProps> = ({ className = "" }) => {
 
   const isFormValid = formData.name && formData.email && formData.message;
 
-  const [activeFilter, setActiveFilter] = useState<string>("all");
   const [isVisible, setIsVisible] = useState(false);
-  const [contactsAnimated, setContactsAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Animation au scroll
@@ -158,7 +156,6 @@ const Contact: React.FC<ContactProps> = ({ className = "" }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          setTimeout(() => setContactsAnimated(true), 300);
         }
       },
       { threshold: 0.2 }
@@ -170,14 +167,6 @@ const Contact: React.FC<ContactProps> = ({ className = "" }) => {
 
     return () => observer.disconnect();
   }, []);
-
-  // Déclencher l'animation des projets quand on change de filtre
-  useEffect(() => {
-    if (isVisible) {
-      setContactsAnimated(false);
-      setTimeout(() => setContactsAnimated(true), 100);
-    }
-  }, [activeFilter]);
 
   return (
     <section

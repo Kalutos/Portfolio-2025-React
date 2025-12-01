@@ -254,7 +254,9 @@ const AboutMe: React.FC = () => {
                 ].map((tab) => (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() =>
+                      setActiveTab(tab.id as "experience" | "skills" | "story")
+                    }
                     className={`px-4 sm:px-6 lg:px-8 py-3 sm:py-4 font-mono text-sm sm:text-base transition-all duration-300 border-b-2 whitespace-nowrap ${
                       activeTab === tab.id
                         ? "text-[#64ffda] border-[#64ffda]"
